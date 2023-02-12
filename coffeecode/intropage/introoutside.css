@@ -1,0 +1,179 @@
+.row12>.column {
+    padding: 0 8px;
+}
+
+.row12:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* The Modal (background) */
+.modal12{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 58px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content12 {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides12 {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev12,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev12:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext12 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow12 {
+    transition: 0.3s;
+}
+
+.hover-shadow12:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ////////// */
+
+
+#introinsidecenter12 {
+    background-color: transparent;
+    height: 800px;
+    width: 100%;
+    /* text-align:center; */
+}
+
+#intromain12 {
+    margin: 0 auto;
+    background-color: rgb(223, 153, 153);
+    background-image: url(./img/introback.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 90%;
+}
+
+#in1 {
+    height: 50px;
+    border: 3px solid yellow;
+    position: relative;
+    top: 700px;
+    right: 1%;
+}
+
+#in2 {
+    height: 40px;
+    border: 3px solid yellow;
+    position: relative;
+    top: 430px;
+    right: -45%;
+}
+
+#in3 {
+    height: 50px;
+    border: 3px solid yellow;
+    position: relative;
+    top: 400px;
+    right: 10%;
+}
+
+#in4 {
+    height: 100px;
+    border: 3px solid yellow;
+    position: relative;
+    top: 600px;
+    right: -338%;
+}

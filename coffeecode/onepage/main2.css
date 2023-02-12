@@ -1,0 +1,123 @@
+/* The grid: Three equal columns that floats next to each other */
+
+#boxmain {
+    text-align: center;
+    display: inline-flex;
+    height: 250px;
+    width: 100%;
+    padding: 0 10% 0 10%;
+}
+
+#boxL:hover {
+    opacity: 0.3;
+    transition: 1s;
+}
+
+#boxM:hover {
+    opacity: 0.3;
+    transition: 1s;
+}
+
+#boxR:hover {
+    opacity: 0.3;
+    transition: 1s;
+}
+
+#boxL {
+    background-color: gray;
+    background-image: url(./img/round.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 4;
+    box-shadow: 0 0 20px 5px;
+    border-radius: 23px;
+}
+
+#boxM {
+    background-color: gray;
+    background-image: url(./img/cat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 4;
+    box-shadow: 0 0 20px 5px;
+    border-radius: 23px;
+}
+
+#boxR {
+    background-color: gray;
+    background-image: url(./img/eat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 4;
+    box-shadow: 0 0 20px 5px;
+    border-radius: 23px;
+}
+
+#boxmm {
+    flex: 1;
+}
+
+#boxM {
+    flex: 4;
+}
+
+#boxR {
+    flex: 4;
+}
+
+/* .column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+  } */
+
+.containerTab {
+    text-align: center;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#b1{
+    border-left:10px solid ;
+    border-right: 10px solid;
+    border-color:orange;
+    border-radius: 500%;
+}
+
+#b2{
+    border-left:10px solid ;
+    border-right: 10px solid;
+    border-color:pink;
+    border-radius: 500%;
+}
+
+#b3{
+    border-left:10px solid ;
+    border-right: 10px solid;
+    border-color:gray;
+    border-radius: 500%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+    float: right;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    cursor: pointer;
+}
+

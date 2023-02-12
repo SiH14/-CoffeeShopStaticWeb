@@ -1,0 +1,225 @@
+#ab1 {
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    display: inline-flex;
+}
+
+#ab11 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab12 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 2;
+    background-image: url(./img/no1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    background-color: transparent;
+}
+
+#ab13 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.1;
+
+    background-color: transparent;
+}
+
+#ab14 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 2;
+
+    background-color: transparent;
+}
+
+#ab15 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab2 {
+    height: 400px;
+    width: 100%;
+    background-color: transparent;
+    display: inline-flex;
+}
+
+#ab21 {
+    position: relative;
+    top: 100px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab22 {
+    position: relative;
+    top: 100px;
+    height: 300px;
+    flex: 2;
+
+    background-color: transparent;
+}
+
+#ab23 {
+    position: relative;
+    top: 100px;
+    height: 300px;
+    flex: 0.1;
+
+    background-color: transparent;
+}
+
+#ab24 {
+    position: relative;
+    top: 100px;
+    height: 300px;
+    flex: 2;
+    background-image: url(./img/no2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+
+    background-color: transparent;
+}
+
+#ab25 {
+    position: relative;
+    top: 100px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab3 {
+    height: 400px;
+    width: 100%;
+    background-color: transparent;
+    display: inline-flex;
+}
+
+#ab31 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab32 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 2;
+    background-image: url(./img/no3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    background-color: transparent;
+}
+
+#ab33 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.1;
+
+    background-color: transparent;
+}
+
+#ab34 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 2;
+
+    background-color: transparent;
+}
+
+#ab35 {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab4 {
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    display: inline-flex;
+}
+
+#ab41 {
+    position: relative;
+    top: 0px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}
+
+#ab42 {
+    position: relative;
+    top: 0px;
+    height: 300px;
+    flex: 2;
+
+    background-color: transparent;
+}
+
+#ab43 {
+    position: relative;
+    top: 0px;
+    height: 300px;
+    flex: 0.1;
+
+    background-color: transparent;
+}
+
+#ab44 {
+    position: relative;
+    top: 0px;
+    height: 300px;
+    flex: 2;
+    background-image: url(./img/no4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+
+    background-color: transparent;
+}
+
+#ab45 {
+    position: relative;
+    top: 0px;
+    height: 300px;
+    flex: 0.5;
+
+    background-color: transparent;
+}

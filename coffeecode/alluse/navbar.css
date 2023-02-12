@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+#navall {
+    background-color: whitesmoke;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    box-shadow:  0px 2px #888888;
+    z-index: 9999;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(75, 117, 200);
+    /* background-color: #333; */
+    overflow: hidden;
+}
+
+.topnav span {
+    color: black;
+}
+
+/* Style the links inside the navigation bar */
+.topnav #navlogo {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    left: 5%;
+}
+
+.topnav #about {
+    float: left;
+    color: #a81515;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    top: 20px;
+    right: 20%;
+}
+
+.topnav #navabout {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    top: 20px;
+    right: 50%;
+}
+
+.topnav #navintro {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    top: 20px;
+    right: 40%;
+}
+
+.topnav #navloca {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    top: 20px;
+    right: 30%;
+}
+
+.topnav #navconus {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: fixed;
+    top: 20px;
+    right: 20%;
+}
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(223, 161, 53);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: transparent;
+    color: white;
+}

@@ -1,0 +1,23 @@
+.locaall{
+    height: 100%;
+    width: 100%;
+    /* text-align: center; */
+    display: inline-flex;
+}
+
+.locaL{
+    flex: 2;
+}
+
+.locamain{
+    flex: 0.2;
+}
+
+.lacatext{
+    flex: 4;
+
+}
+
+.locaallmap{
+    flex: 6;
+}

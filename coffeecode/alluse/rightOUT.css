@@ -1,0 +1,28 @@
+#ri{
+    background-color: #FF0000;
+    width:  70px;
+    height: 70px;
+    right: 0px;
+    top: 160px;
+    position: fixed;
+    background-image: url("../alluse/img/FB.png");
+    background-color:transparent;
+    background-size: contain;
+    z-index: 10;
+    /* background-image: ; */ 
+    /* object-fit:cover; */
+}
+
+#rightfb{
+    background-color: #617bc2;
+    width: 120px;
+    height: 80px;
+    right: 0px;
+    bottom: -10px;
+    position: fixed;
+    background-image: url("../onepage/img/catin.png");
+    background-color:transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+}

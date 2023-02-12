@@ -1,0 +1,117 @@
+.image-container {
+    background-image: url("./img/abheadlogo.jpg");
+    /* The image used - important! */
+    background-size: cover;
+    position: relative;
+    /* Needed to position the cutout text in the middle of the image */
+    height: 900px;
+    /* Some height */
+}
+
+.text {
+    /* background-color: rgb(230, 230, 230,0.5); */
+    background-color: black;
+    /* color:whitesmoke; */
+    color:rgba(255, 255, 255, 0.3);
+    font-size: 10vw;
+    /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto;
+    /* Center the text container */
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    /* Center text */
+    position: absolute;
+    /* Position text */
+    top: 18%;
+    /* Position text in the middle */
+    left: 50%;
+    /* Position text in the middle */
+    transform: translate(-50%, -50%);
+    /* Position text in the middle */
+    /* mix-blend-mode: multiply; */
+    mix-blend-mode: screen;
+    /* This makes the cutout text possible */
+}
+
+.text1 {
+    /* background-color: rgb(230, 230, 230,0.5); */
+    background-color: black;
+    /* color:whitesmoke; */
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 2vw;
+    /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto;
+    /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    /* Center text */
+    position: absolute;
+    /* Position text */
+    top: 33%;
+    /* Position text in the middle */
+    left: 50%;
+    /* Position text in the middle */
+    transform: translate(-85%, -50%);
+    /* Position text in the middle */
+    /* mix-blend-mode: multiply; */
+    mix-blend-mode: screen;
+    /* This makes the cutout text possible */
+}
+
+.text2 {
+    /* background-color: rgb(230, 230, 230,0.5); */
+    background-color: black;
+    /* color:whitesmoke; */
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 2vw;
+    /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto;
+    /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    /* Center text */
+    position: absolute;
+    /* Position text */
+    top: 33%;
+    /* Position text in the middle */
+    left: 50%;
+    /* Position text in the middle */
+    transform: translate(-50%, -50%);
+    /* Position text in the middle */
+    /* mix-blend-mode: multiply; */
+    mix-blend-mode: screen;
+    /* This makes the cutout text possible */
+}
+
+.text3 {
+    /* background-color: rgb(230, 230, 230,0.5); */
+    background-color: black;
+    /* color:whitesmoke; */
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 2vw;
+    /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto;
+    /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    /* Center text */
+    position: absolute;
+    /* Position text */
+    top: 33%;
+    /* Position text in the middle */
+    left: 50%;
+    /* Position text in the middle */
+    transform: translate(-17%, -50%);
+    /* Position text in the middle */
+    /* mix-blend-mode: multiply; */
+    mix-blend-mode: screen;
+    /* This makes the cutout text possible */
+}

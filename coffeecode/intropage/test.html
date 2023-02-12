@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./introoutside.css">
+
+</head>
+
+<body>
+    <div id="introinsidecenter12">
+        <div id="intromain12">
+            <!-- Images used to open the lightbox -->
+            <div class="row12">
+                <div class="column12">
+                    <img id="in1" src="./img/in1.jpg" onclick="openModal12();currentSlide12(1)" class="hover-shadow12">
+                </div>
+                <div class="column12">
+                    <img id="in2" src="./img/in2.jpg" onclick="openModal12();currentSlide12(2)" class="hover-shadow12">
+                </div>
+                <div class="column12">
+                    <img id="in3" src="./img/in3.jpg" onclick="openModal12();currentSlide12(3)" class="hover-shadow12">
+                </div>
+                <div class="column12">
+                    <img id="in4" src="./img/in4.jpg" onclick="openModal12();currentSlide12(4)" class="hover-shadow12">
+                </div>
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal12" class="modal12">
+                <span class="close cursor12" onclick="closeModal12()">&times;</span>
+                <div class="modal-content12">
+
+                    <div class="mySlides12">
+                        <div class="numbertext12">1 / 4</div>
+                        <img src="./img/in1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides12">
+                        <div class="numbertext12">2 / 4</div>
+                        <img src="./img/in2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides12">
+                        <div class="numbertext12">3 / 4</div>
+                        <img src="./img/in3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides12">
+                        <div class="numbertext12">4 / 4</div>
+                        <img src="./img/in4.jpg" style="width:100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev12" onclick="plusSlides12(-1)">&#10094;</a>
+                    <a class="next12" onclick="plusSlides12(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./introoutside.js"></script>
+</body>
+
+</html>
