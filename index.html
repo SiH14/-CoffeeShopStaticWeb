@@ -3,228 +3,234 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>TX1</title>
-  <link rel="stylesheet" href="../alluse/navbar.css">
-  <link rel="stylesheet" href="./top.css">
-  <link rel="stylesheet" href="../alluse/rightOUT.css">
-  <link rel="stylesheet" href="./main2.css">
-  <link rel="stylesheet" href="../alluse/verylow.css">
-  <script src="https://kit.fontawesome.com/d978d0ee9c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
   <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
     body {
-      background-color: rgb(255, 179, 102, 0.1); 
-    }
-
-    #titlewd {
-      font-weight: bold;
-      font-size: 30px;
-    }
-
-    #onetitle {
-      text-align: center;
-    }
-
-    .onevideopapa {
-      text-align: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    #onevideo {
-      width: 75%;
-      height: 500px;
+      min-height: 100vh;
+      /* center the canvas in the viewport */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* atop an off-white background include a pattern using the star icon created for the project */
+      background: url('data:image/svg+xml;utf8,<svg opacity="0.15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="160" height="150"><g transform="translate(1 1)" stroke-width="2" stroke="%23ffc928" stroke-linecap="round" stroke-linejoin="round" fill="%23ffc928"><path d="M 0 4.5 l 4.5 0 l 2.5 -4.5 l 2.5 4.5 l 4.5 0 l -3.5 3.5 l 1.5 5 l -5 -2.5 l -5 2.5 l 1.5 -5 l -3.5 -3.5"></path></g></svg>'),
+        hsl(0, 0%, 96%);
+      background-size: 40px;
     }
   </style>
 </head>
 
 <body>
+  <!-- canvas in which to draw the star -->
+  <canvas width="500" height="500"></canvas>
 
 
-  <!-- navbar -->
-  <div id="navall">
-    <div class="topnav">
-      <a id="navlogo" class="active" href="./S01.html"><img style="height: 60px;" src="../alluse/img/Rv1.png"></a>
-      <a id="navabout" href="../aboutpage/about.html"><span>關於R星</span></a>
-      <a id="navintro" href="../intropage/intro.html"><span>R星介紹</span></a>
-      <a id="navloca" href="../locapage/laca.html"><span>交通指南</span></a>
-      <a id="navconus" href="../conuspage/conus.html"><span>聯絡我們</span></a>
-    </div>
-  </div>
-  <!-- navbar -->
+  <script>
+    // from the Zdog object extract the necessary modules
+    const {
+      Illustration, Ellipse, Rect, Shape, Group, Anchor,
+    } = Zdog;
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1 id="onetitle">SIMPLE . COFFE . CAT</h1>
-  <!-- //////////製作右方快捷 -->
-  <div>
+    // set up the illustration within the existing canvas element
+    const illustration = new Illustration({
+      element: 'canvas',
+      dragRotate: true,
+    });
 
-    <!-- <a href="https://www.facebook.com/robotstation2/">
-      <div id="rightig"></div>
-    </a> -->
-    <a href="../conuspage/conus.html">
-      <div id="rightfb"></div>
-    </a>
-  </div>
-  <!-- //////////製作右方快捷 -->
-  <div class="slideshow-container">
+    // below the star draw a circle with a fill and no stroke, for the shadow
+    const shadow = new Ellipse({
+      addTo: illustration,
+      diameter: 100,
+      stroke: false,
+      fill: true,
+      color: 'hsla(45, 100%, 58%, 0.4)',
+      translate: { x: 50, y: 100 },
+      rotate: { x: Math.PI / 1.7 },
+    });
 
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="./img/run1.jpg" style="width:100%">
-      <!-- <div class="text">Caption Text</div> -->
-    </div>
+    // include an anchor point for the star
+    // ! position the star atop the anchor, to have the rotation occur around this point
+    const starAnchor = new Anchor({
+      addTo: illustration,
+      translate: { y: 100 },
+      rotate: { z: Math.PI / 10 },
+    });
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="./img/run2.jpg" style="width:100%">
-      <!-- <div class="text">Caption Two</div> -->
-    </div>
+    // draw a star in a group element positioned atop the anchor point
+    const starGroup = new Group({
+      addTo: starAnchor,
+      translate: { x: -70, y: -170 }, // -70 to center the 140 wide shape
+    });
 
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="./img/run3.jpg" style="width:100%">
-      <!-- <div class="text">Caption Three</div> -->
-    </div>
+    // draw the path describing the star
+    new Shape({
+      addTo: starGroup,
+      path: [
+        { x: 0, y: 45 },
+        { x: 45, y: 45 },
+        { x: 70, y: 0 },
+        { x: 95, y: 45 },
+        { x: 140, y: 45 },
+        { x: 105, y: 80 },
+        { x: 120, y: 130 },
+        { x: 70, y: 105 },
+        { x: 20, y: 130 },
+        { x: 35, y: 80 },
+        { x: 0, y: 45 },
+      ],
+      stroke: 40,
+      color: 'hsl(45, 100%, 58%)',
+    });
+    // within the path include a rectangle to remove the gap between the center of the star and its stroke
+    new Rect({
+      addTo: starGroup,
+      width: 40,
+      height: 50,
+      stroke: 40,
+      translate: { x: 70, y: 70 },
+      color: 'hsl(45, 100%, 58%)',
+    });
 
-  </div>
-  <br>
+    // include a group for the eyes, positioned halfway through the height of the star
+    const eyesGroup = new Group({
+      addTo: starGroup,
+      translate: { x: 70, y: 72.5, z: 20 },
+    });
 
-  <!-- <div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div> -->
+    // add black circles describing the contour of the eyes, and either end of the star
+    const eye = new Ellipse({
+      addTo: eyesGroup,
+      diameter: 5,
+      stroke: 15,
+      translate: { x: -32.5 },
+      color: 'hsl(0, 0%, 0%)',
+    });
+    eye.copy({
+      translate: { x: 32.5 },
+    });
 
-  <br>
-  <br>
+    // add an anchor point for the white part of the eyes
+    // by later translating the white part of the eyes, the rotation allows to have the circle rotate around the anchor point
+    const leftEyeAnchor = new Anchor({
+      addTo: eyesGroup,
+      translate: { x: -32.5, z: 0.5 },
+    });
+    const leftEye = new Ellipse({
+      addTo: leftEyeAnchor,
+      diameter: 1,
+      stroke: 5,
+      color: 'hsl(0, 100%, 100%)',
+      translate: { x: -3.5 },
+    });
 
+    // copy the left anchor for the right side
+    const rightEyeAnchor = leftEyeAnchor.copyGraph({
+      translate: { x: 32.5, z: 0.5 },
+    });
 
+    // include an anchor point for the mouth
+    // by centering the mouth around the anchor and scaling the anchor itself, the change in size occurs from the center of the mouth
+    const mouthAnchor = new Anchor({
+      addTo: starGroup,
+      translate: { x: 70, y: 95, z: 20 },
+      scale: 0.8,
+    });
+    // draw a mouth with a line and arc commands
+    const mouth = new Shape({
+      addTo: mouthAnchor,
+      path: [
+        { x: -8, y: 0 },
+        { x: 8, y: 0 },
+        {
+          arc: [
+            { x: 4, y: 6 },
+            { x: 0, y: 6 },
+          ],
+        },
+        {
+          arc: [
+            { x: -4, y: 6 },
+            { x: -8, y: 0 },
+          ],
+        },
+      ],
+      stroke: 10,
+      color: 'hsl(358, 100%, 65%)',
+    });
 
-  <!--  -->
-  <h1 id="onetitle">ENJOY . R S T A R</h1>
-  <br>
-  <br>
-  <!-- The grid: three columns -->
-  <div class="row" id="boxmain">
-    <div class="column" id="boxL" onclick="openTab('b1');">
-      <p style="font-size: 80px; color:rgb(255, 165, 0, 0.7);">
-        <i class="fa-solid fa-camera-retro"></i>
-      </p>
-    </div>
-    <div id="boxmm"></div>
-    <div class="column" id="boxM" onclick="openTab('b2');">
-      <p style="font-size: 80px; color:rgb(229, 155, 147, 0.7);">
-        <i class="fa-solid fa-paw"></i>
-      </p>
-    </div>
-    <div id="boxmm"></div>
-    <div class="column" id="boxR" onclick="openTab('b3');">
-      <p style="font-size: 80px; color:rgb(105, 105, 105);">
-        <i class="fa-solid fa-utensils"></i>
-      </p>
-    </div>
-  </div>
-  <h1 style="color:transparent;">123</h1>
-  <!-- The expanding grid (hidden by default) -->
-  <div id="b1" class="containerTab" style="display:none;background:transparent">
-    <!-- If you want the ability to close the container, add a close button -->
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h1>攝影</h1>
-    <p>報紙站長所說稿件特徵，一座語音進攻整合如果你，我和糖尿病拿出，研究生這麼多媒體領先多少請在報名，家裡媽媽策略那就無關剛剛大多你是，英文越來越說出，財政新臺幣一口氣認識，全家想法輕輕是不是現代反饋，上。</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p><a href="../intropage/intropo.html">了解更多</a></p>
-  </div>
+    illustration.updateRenderGraph();
 
-  <div id="b2" class="containerTab" style="display:none;background:transparent">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h1>貓</h1>
-    <p>三年各級不明白科技有限公司，恐怖幫你記得如今更新時間女朋友不知工業點此眼光協議早已帶來，缺乏臺灣人，眼神每個詳細內容美國住宅舉行運作沉默頁面懂得電話，變成順利又有型號狀況人間，呵呵哪些，鏡頭費用手機。</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p><a href="../intropage/intropo.html">了解更多</a></p>
-  </div>
+    /* to animate the star, change the transform property as follows
+    
+    |variableName|transform|valueRange|
+    |---|---|---|
+    |starAnchor|rotate.z|[Math.PI/10, -Math.PI/10]|
+    |leftIrisAnchor && rightIrisAnchor|rotate.z|[0, Math.PI/2]|
+    |mouthAnchor|scale|[0.8, 1.2]|
+    |shadow|translate.x|[50, -50]|
+    */
 
-  <div id="b3" class="containerTab" style="display:none;background:transparent">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h1>美食</h1>
-    <p>知識保存裝飾網絡網路雜誌轉移軟體你在做什麼風險民國，未知原文都能演唱年輕人不如重量，由於資格事務什麼是委託滑鼠始終因為對她命令，價值我說教授本網站不必優秀肯定轉身，說道訪問類似聽說漸漸，記憶每頁，手。</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p><a href="../intropage/intromenu.html">了解更多</a></p>
-  </div>
+    // ! I am positive there are much better ways to achieve this animation, but this is my take using anime.js
+    // I am still a newbie when it comes to animation
+    // create an object describing the values for the different elements
+    const starObject = {
+      star: Math.PI / 10,
+      shadow: 50,
+      mouth: 0.8,
+      eyes: 0
+    }
 
+    // set up a repeating animation which constantly updates the illustration and updates the desired transform properties according to the object's values
+    const timeline = anime.timeline({
+      duration: 1100,
+      easing: 'easeInOutQuart',
+      direction: 'alternate',
+      loop: true,
+      update: () => {
+        starAnchor.rotate.z = starObject.star;
+        shadow.translate.x = starObject.shadow;
+        mouth.scale = starObject.mouth;
+        leftEyeAnchor.rotate.z = starObject.eyes;
+        rightEyeAnchor.rotate.z = starObject.eyes;
 
+        illustration.updateRenderGraph();
+      }
+    });
 
-  <!--  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1 id="onetitle">R STYLE</h1>
-  <div class="onevideopapa">
-    <iframe id="onevideo" src="https://www.youtube.com/embed/alxiy4xhvtU" title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-  <br>
-  <br>
-  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    // animate the star with a slightly more pronounced easing function
+    timeline.add({
+      targets: starObject,
+      star: -Math.PI / 10,
+      easing: 'easeInOutQuint',
+    });
+    // have the shadow follow with a small delay
+    timeline.add({
+      targets: starObject,
+      delay: 20,
+      shadow: -50,
+    }, '-=1100')
 
-  <!-- ////網頁最下面//// -->
-  <div class="bottomback" id="bottombackid">
-    <div id="bottom1">
-      <img id="bottom1logo" src="../alluse/img/logo.jpg" style="height: 100px; ">
-      <p id="buttomtext" style="color:#d0d0d0 ;">© 2022 R-Star Coffee</p>
-    </div>
-    <div id="bottom2">
-      <br>
+    // with a smaller duration and slightly postponed, animate the mouth and the eyes
+    timeline.add({
+      targets: starObject,
+      mouth: 1.2,
+      duration: 300,
+    }, '-=800');
 
-      <br>
-      <table>
-        <tr>
-          <th align="left"><a href="https://www.facebook.com/robotstation2/"><i
-                class="fa-brands fa-line fa-3x fa-inverse"></i></a> <a href="https://www.facebook.com/robotstation2/"><i
-                class="fa-brands fa-square-facebook fa-3x fa-inverse"></i></a> <a
-              href="https://www.instagram.com/r.star_coffee/"><i
-                class="fa-brands fa-square-instagram fa-3x fa-inverse"></i></a></th>
-        </tr>
-        <tr>
-          <th id="buttomth" align="left">R星電話:</th>
-        </tr>
-        <tr>
-          <td id="buttomid">04-23268385</td>
-        </tr>
-        <tr>
-          <th id="buttomth" align="left">R星地址:</th>
-        </tr>
-        <tr>
-          <td id="buttomid">台中市西區忠明南路101號</td>
-        </tr>
-        <tr>
-          <th id="buttomth" align="left">營業時間:</th>
-        </tr>
-        <tr>
-          <td id="buttomid">10:00~21:00 過年期間休息</td>
-        </tr>
-      </table>
+    timeline.add({
+      targets: starObject,
+      eyes: Math.PI / 2,
+      duration: 900,
+    }, '-=1000');
 
-
-    </div>
-
-  </div>
-  <script src="./top.js"></script>
-  <script src="./main2.js"></script>
-  <!-- ////網頁最下面//// -->
+  </script>
 </body>
 
 </html>
